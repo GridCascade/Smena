@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28F09D00204B15FE0086823D /* RecorderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F09CFC204B15FD0086823D /* RecorderVC.swift */; };
+		28F09D01204B15FE0086823D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F09CFD204B15FD0086823D /* ViewController.swift */; };
+		28F09D02204B15FE0086823D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F09CFE204B15FD0086823D /* Main.storyboard */; };
+		28F09D03204B15FE0086823D /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F09CFF204B15FE0086823D /* PlayerVC.swift */; };
 		A2BF422C1FC31FBC00021AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF422B1FC31FBC00021AC4 /* AppDelegate.swift */; };
 		A2BF42331FC31FBC00021AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BF42321FC31FBC00021AC4 /* Assets.xcassets */; };
 		A2BF424E1FC3286200021AC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BF424D1FC3286200021AC4 /* LaunchScreen.storyboard */; };
@@ -30,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28F09CFC204B15FD0086823D /* RecorderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderVC.swift; sourceTree = "<group>"; };
+		28F09CFD204B15FD0086823D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28F09CFE204B15FD0086823D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		28F09CFF204B15FE0086823D /* PlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		A2BF42281FC31FBC00021AC4 /* SmenaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmenaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BF422B1FC31FBC00021AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BF42321FC31FBC00021AC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +95,10 @@
 		A2BF424B1FC3279300021AC4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				28F09CFE204B15FD0086823D /* Main.storyboard */,
+				28F09CFC204B15FD0086823D /* RecorderVC.swift */,
+				28F09CFF204B15FE0086823D /* PlayerVC.swift */,
+				28F09CFD204B15FD0086823D /* ViewController.swift */,
 				A2BF422B1FC31FBC00021AC4 /* AppDelegate.swift */,
 			);
 			path = Sources;
@@ -177,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F09D02204B15FE0086823D /* Main.storyboard in Resources */,
 				A2BF42331FC31FBC00021AC4 /* Assets.xcassets in Resources */,
 				A2BF424E1FC3286200021AC4 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -189,6 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F09D03204B15FE0086823D /* PlayerVC.swift in Sources */,
+				28F09D01204B15FE0086823D /* ViewController.swift in Sources */,
+				28F09D00204B15FE0086823D /* RecorderVC.swift in Sources */,
 				A2BF422C1FC31FBC00021AC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SmenaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.av.SmenaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -333,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SmenaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.av.SmenaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
