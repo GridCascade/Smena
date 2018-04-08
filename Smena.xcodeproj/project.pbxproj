@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28984E1E2067C4BD00427D72 /* PlayerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28984E1D2067C4BD00427D72 /* PlayerSession.swift */; };
+		28984E202067C4CD00427D72 /* PlayerSessionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28984E1F2067C4CD00427D72 /* PlayerSessionItem.swift */; };
+		28B174D62078E8C700BDD52D /* RendererViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B174D52078E8C700BDD52D /* RendererViewContext.swift */; };
+		28B174D82078EB0000BDD52D /* RendererViewContextEAGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B174D72078EB0000BDD52D /* RendererViewContextEAGL.swift */; };
+		28BDE2D3205EA82C0032F269 /* RendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDE2D2205EA82C0032F269 /* RendererView.swift */; };
+		28F09D0B204E7FD20086823D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F09D0A204E7FD10086823D /* Player.swift */; };
 		A2B6DC1D1FC31D0E00AECCF7 /* Smena.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B6DC1B1FC31D0E00AECCF7 /* Smena.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2BF421E1FC31E9300021AC4 /* Smena.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF421D1FC31E9300021AC4 /* Smena.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28984E1D2067C4BD00427D72 /* PlayerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSession.swift; sourceTree = "<group>"; };
+		28984E1F2067C4CD00427D72 /* PlayerSessionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSessionItem.swift; sourceTree = "<group>"; };
+		28B174D52078E8C700BDD52D /* RendererViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererViewContext.swift; sourceTree = "<group>"; };
+		28B174D72078EB0000BDD52D /* RendererViewContextEAGL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererViewContextEAGL.swift; sourceTree = "<group>"; };
+		28BDE2D2205EA82C0032F269 /* RendererView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererView.swift; sourceTree = "<group>"; };
+		28F09D0A204E7FD10086823D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A2B6DC181FC31D0E00AECCF7 /* Smena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Smena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B6DC1B1FC31D0E00AECCF7 /* Smena.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Smena.h; sourceTree = "<group>"; };
 		A2B6DC1C1FC31D0E00AECCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28A6D352207A9D78000BD637 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				28F09D0A204E7FD10086823D /* Player.swift */,
+				28BDE2D2205EA82C0032F269 /* RendererView.swift */,
+				28984E1D2067C4BD00427D72 /* PlayerSession.swift */,
+				28984E1F2067C4CD00427D72 /* PlayerSessionItem.swift */,
+				28B174D52078E8C700BDD52D /* RendererViewContext.swift */,
+				28B174D72078EB0000BDD52D /* RendererViewContextEAGL.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		A2B6DC0E1FC31D0E00AECCF7 = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +73,7 @@
 		A2B6DC1A1FC31D0E00AECCF7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				28A6D352207A9D78000BD637 /* Player */,
 				A2B6DC1B1FC31D0E00AECCF7 /* Smena.h */,
 				A2B6DC1C1FC31D0E00AECCF7 /* Info.plist */,
 				A2BF421D1FC31E9300021AC4 /* Smena.swift */,
@@ -135,7 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B174D82078EB0000BDD52D /* RendererViewContextEAGL.swift in Sources */,
+				28BDE2D3205EA82C0032F269 /* RendererView.swift in Sources */,
+				28B174D62078E8C700BDD52D /* RendererViewContext.swift in Sources */,
+				28F09D0B204E7FD20086823D /* Player.swift in Sources */,
+				28984E202067C4CD00427D72 /* PlayerSessionItem.swift in Sources */,
 				A2BF421E1FC31E9300021AC4 /* Smena.swift in Sources */,
+				28984E1E2067C4BD00427D72 /* PlayerSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +290,7 @@
 		A2B6DC211FC31D0E00AECCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -266,7 +299,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/src/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.av.Smena;
@@ -281,6 +314,7 @@
 		A2B6DC221FC31D0E00AECCF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -289,7 +323,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/src/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.av.Smena;
