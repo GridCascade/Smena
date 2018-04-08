@@ -3,7 +3,7 @@
 //  Smena
 //
 //  Created by Dmitrii on 07/04/2018.
-//  Copyright © 2018 Andrei Valkovskii. All rights reserved.
+//  Copyright © 2018 Grid Cascade. All rights reserved.
 //
 
 import UIKit
