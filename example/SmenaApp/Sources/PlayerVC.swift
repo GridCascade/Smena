@@ -8,17 +8,22 @@
 
 import UIKit
 import MobileCoreServices
+import Smena
 
 
 class PlayerVC: UIViewController {
 
     // MARK: - Properties
     @IBOutlet private var toolbar: UIToolbar!
+    @IBOutlet private var playerView: RendererView!
+
+    var player: Player!
 
 
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        player = Player(view: playerView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +34,10 @@ class PlayerVC: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         pausePlayer()
+    }
+
+    deinit {
+        player.destroy()
     }
 
     // MARK: - Public
@@ -49,11 +58,11 @@ class PlayerVC: UIViewController {
     }
 
     private func startPlayer() {
-        //player.play()
+        player.start()
     }
 
     private func pausePlayer() {
-        //player.pause()
+        player.pause()
     }
 
 
@@ -79,8 +88,9 @@ extension PlayerVC: UIImagePickerControllerDelegate {
         dismiss(animated: true) {
             if mediaType == kUTTypeMovie as String {
                 let url = info[UIImagePickerControllerMediaURL] as! URL
-                // open clip from URL
-                // add clip to the session
+                let item = PlayerSessionItem(url: url)
+                let session = PlayerSession(items: [item])
+                self.player.setSession(session: session)
                 self.startPlayer()
             }
         }

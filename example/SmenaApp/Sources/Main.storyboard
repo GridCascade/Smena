@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nhs-X6-gRu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nhs-X6-gRu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -141,6 +141,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-nu-wss" customClass="RendererView" customModule="Smena">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bup-jb-JyV">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
@@ -160,7 +163,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ibh-nu-wss" firstAttribute="top" secondItem="WIf-Ti-HYg" secondAttribute="top" id="H8X-Xh-7Qe"/>
+                            <constraint firstItem="Ibh-nu-wss" firstAttribute="bottom" secondItem="JRF-Rb-bIL" secondAttribute="bottom" id="ICc-92-wo7"/>
                             <constraint firstItem="bup-jb-JyV" firstAttribute="leading" secondItem="JRF-Rb-bIL" secondAttribute="leading" id="JkR-Pq-s3L"/>
+                            <constraint firstItem="Ibh-nu-wss" firstAttribute="leading" secondItem="JRF-Rb-bIL" secondAttribute="leading" id="KkK-2h-t1M"/>
+                            <constraint firstItem="Ibh-nu-wss" firstAttribute="trailing" secondItem="JRF-Rb-bIL" secondAttribute="trailing" id="ZBV-qn-Fqy"/>
                             <constraint firstItem="bup-jb-JyV" firstAttribute="bottom" secondItem="JRF-Rb-bIL" secondAttribute="bottom" id="lXP-DI-fiG"/>
                             <constraint firstItem="bup-jb-JyV" firstAttribute="trailing" secondItem="JRF-Rb-bIL" secondAttribute="trailing" id="mov-La-7qN"/>
                         </constraints>
@@ -176,6 +183,7 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="playerView" destination="Ibh-nu-wss" id="on5-5n-sVh"/>
                         <outlet property="toolbar" destination="bup-jb-JyV" id="Czd-ar-B9T"/>
                     </connections>
                 </viewController>
