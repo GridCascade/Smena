@@ -120,7 +120,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = "Andrei Valkovskii";
+				ORGANIZATIONNAME = "Grid Cascade";
 				TargetAttributes = {
 					A2B6DC171FC31D0E00AECCF7 = {
 						CreatedOnToolsVersion = 9.1;

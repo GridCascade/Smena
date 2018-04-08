@@ -167,7 +167,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = "Andrei Valkovskii";
+				ORGANIZATIONNAME = "Grid Cascade";
 				TargetAttributes = {
 					A2BF42271FC31FBC00021AC4 = {
 						CreatedOnToolsVersion = 9.1;
