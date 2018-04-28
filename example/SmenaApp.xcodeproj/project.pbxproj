@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288008022094A026009F2666 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288008012094A026009F2666 /* VCFactory.swift */; };
+		288008042094A0D0009F2666 /* PlayerVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288008032094A0D0009F2666 /* PlayerVCModel.swift */; };
 		28984E2420680B4C00427D72 /* Smena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BF42481FC3271400021AC4 /* Smena.framework */; };
 		28984E27206815B600427D72 /* Smena.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2BF42481FC3271400021AC4 /* Smena.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28F09D00204B15FE0086823D /* RecorderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F09CFC204B15FD0086823D /* RecorderVC.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		288008012094A026009F2666 /* VCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
+		288008032094A0D0009F2666 /* PlayerVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVCModel.swift; sourceTree = "<group>"; };
 		28F09CFC204B15FD0086823D /* RecorderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderVC.swift; sourceTree = "<group>"; };
 		28F09CFD204B15FD0086823D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28F09CFE204B15FD0086823D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		288008052094A0DD009F2666 /* PlayerVC */ = {
+			isa = PBXGroup;
+			children = (
+				28F09CFF204B15FE0086823D /* PlayerVC.swift */,
+				288008032094A0D0009F2666 /* PlayerVCModel.swift */,
+			);
+			path = PlayerVC;
+			sourceTree = "<group>";
+		};
+		288008082094E49E009F2666 /* RecorderVC */ = {
+			isa = PBXGroup;
+			children = (
+				28F09CFC204B15FD0086823D /* RecorderVC.swift */,
+			);
+			path = RecorderVC;
+			sourceTree = "<group>";
+		};
 		28984E2320680B4C00427D72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,11 +140,12 @@
 		A2BF424B1FC3279300021AC4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				288008052094A0DD009F2666 /* PlayerVC */,
+				288008082094E49E009F2666 /* RecorderVC */,
 				28F09CFE204B15FD0086823D /* Main.storyboard */,
-				28F09CFC204B15FD0086823D /* RecorderVC.swift */,
-				28F09CFF204B15FE0086823D /* PlayerVC.swift */,
 				28F09CFD204B15FD0086823D /* ViewController.swift */,
 				A2BF422B1FC31FBC00021AC4 /* AppDelegate.swift */,
+				288008012094A026009F2666 /* VCFactory.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -230,7 +252,9 @@
 				28F09D03204B15FE0086823D /* PlayerVC.swift in Sources */,
 				28F09D01204B15FE0086823D /* ViewController.swift in Sources */,
 				28F09D00204B15FE0086823D /* RecorderVC.swift in Sources */,
+				288008042094A0D0009F2666 /* PlayerVCModel.swift in Sources */,
 				A2BF422C1FC31FBC00021AC4 /* AppDelegate.swift in Sources */,
+				288008022094A026009F2666 /* VCFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

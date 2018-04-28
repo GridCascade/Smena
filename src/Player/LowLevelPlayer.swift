@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 
 
-public class LowLevelPlayer: NSObject {
+public class LowLevelPlayer: NSObject, AbstractPlayer {
 
     // MARK: - Properties
     private var caDisplayLink: CADisplayLink!
@@ -21,11 +21,13 @@ public class LowLevelPlayer: NSObject {
     private weak var rendererView: LowLevelRendererView?
 
     // MARK: - Lyfecycle
-    public init(view: LowLevelRendererView) {
+    public required init(view: UIView) {
+        assert(view is LowLevelRendererView, "View should be an instance of LowLevelRendererView")
+
         super.init()
 
         avPlayer = AVPlayer()
-        rendererView = view
+        rendererView = view as? LowLevelRendererView
         setupVideoOutput(forItem: avPlayer.currentItem)
 
         caDisplayLink = CADisplayLink(target: self, selector: #selector(displayLinkCallback(_:)))

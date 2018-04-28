@@ -10,17 +10,21 @@ import Foundation
 import AVFoundation
 
 
-public class HighLevelPlayer {
+public class HighLevelPlayer: AbstractPlayer {
 
+    // MARK: - Properties
     private var avPlayer: AVPlayer!
     private weak var rendererView: HighLevelRendererView?
 
-    public init(view: HighLevelRendererView) {
+    // MARK: - Lyfecycle
+    public required init(view: UIView) {
+        assert(view is HighLevelRendererView, "View should be an instance of HighLevelRendererView")
         avPlayer = AVPlayer()
-        rendererView = view
+        rendererView = view as? HighLevelRendererView
         rendererView?.player = avPlayer
     }
 
+    // MARK: - Public
     public func start() {
         avPlayer.play()
     }
@@ -28,6 +32,8 @@ public class HighLevelPlayer {
     public func pause() {
         avPlayer.pause()
     }
+
+    public func destroy() {}
 
     public func setSession(session: PlayerSession) {
         guard let asset = session.combinedAsset() else { return }
@@ -42,6 +48,8 @@ public class HighLevelPlayer {
     public func replaceCurrentItem(with item: AVPlayerItem?) {
         avPlayer.replaceCurrentItem(with: item)
     }
+
+    // MARK: - Private
 }
 
 
