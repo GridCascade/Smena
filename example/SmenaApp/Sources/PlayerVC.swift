@@ -15,15 +15,26 @@ class PlayerVC: UIViewController {
 
     // MARK: - Properties
     @IBOutlet private var toolbar: UIToolbar!
-    @IBOutlet private var playerView: RendererView!
 
-    var player: Player!
+    // LowLevel -- CADisplayLink
+    @IBOutlet private var llRendererView: LowLevelRendererView!
+//    var llPlayer: LowLevelPlayer!
 
+    // HighLevel -- AVPlayerLayer
+    @IBOutlet private var hlRendererView: HighLevelRendererView!
+    var hlPlayer: HighLevelPlayer!
 
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        player = Player(view: playerView)
+
+        // LowLevelPlayer
+//        llPlayer = LowLevelPlayer(view: llRendererView)
+//        llRendererView.isHidden = false
+
+        // HighLevelPlayer
+        hlPlayer = HighLevelPlayer(view: hlRendererView)
+        hlRendererView.isHidden = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +48,7 @@ class PlayerVC: UIViewController {
     }
 
     deinit {
-        player.destroy()
+        //llPlayer.destroy()
     }
 
     // MARK: - Public
@@ -58,11 +69,13 @@ class PlayerVC: UIViewController {
     }
 
     private func startPlayer() {
-        player.start()
+        //llPlayer.start()
+        hlPlayer.start()
     }
 
     private func pausePlayer() {
-        player.pause()
+        //llPlayer.pause()
+        hlPlayer.pause()
     }
 
 
@@ -90,7 +103,8 @@ extension PlayerVC: UIImagePickerControllerDelegate {
                 let url = info[UIImagePickerControllerMediaURL] as! URL
                 let item = PlayerSessionItem(url: url)
                 let session = PlayerSession(items: [item])
-                self.player.setSession(session: session)
+                //self.llPlayer.setSession(session: session)
+                self.hlPlayer.setSession(session: session)
                 self.startPlayer()
             }
         }

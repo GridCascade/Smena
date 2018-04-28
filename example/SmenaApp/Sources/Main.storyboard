@@ -141,8 +141,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-nu-wss" customClass="RendererView" customModule="Smena">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-nu-wss" userLabel="HL Renderer View" customClass="HighLevelRendererView" customModule="Smena">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qtg-Un-fgb" userLabel="LL Renderer View" customClass="LowLevelRendererView" customModule="Smena">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bup-jb-JyV">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -183,7 +187,8 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="playerView" destination="Ibh-nu-wss" id="on5-5n-sVh"/>
+                        <outlet property="hlRendererView" destination="Ibh-nu-wss" id="GXD-p8-uOc"/>
+                        <outlet property="llRendererView" destination="Qtg-Un-fgb" id="QAd-bZ-o1s"/>
                         <outlet property="toolbar" destination="bup-jb-JyV" id="Czd-ar-B9T"/>
                     </connections>
                 </viewController>

@@ -9,7 +9,8 @@
 import Foundation
 import AVFoundation
 
-public class Player: NSObject {
+
+public class LowLevelPlayer: NSObject {
 
     // MARK: - Properties
     private var caDisplayLink: CADisplayLink!
@@ -17,16 +18,14 @@ public class Player: NSObject {
     private var avPlayer: AVPlayer!
 
     private var videoOutputQueue: DispatchQueue!
-    private weak var rendererView: RendererView?
+    private weak var rendererView: LowLevelRendererView?
 
     // MARK: - Lyfecycle
-    public init(view: RendererView) {
+    public init(view: LowLevelRendererView) {
         super.init()
 
         avPlayer = AVPlayer()
-
         rendererView = view
-
         setupVideoOutput(forItem: avPlayer.currentItem)
 
         caDisplayLink = CADisplayLink(target: self, selector: #selector(displayLinkCallback(_:)))
@@ -115,7 +114,7 @@ public class Player: NSObject {
 }
 
 
-extension Player: AVPlayerItemOutputPullDelegate {
+extension LowLevelPlayer: AVPlayerItemOutputPullDelegate {
 
     public func outputMediaDataWillChange(_ sender: AVPlayerItemOutput) {
         resumeDisplay()
