@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2880080020948D67009F2666 /* HighLevelPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288007FF20948D67009F2666 /* HighLevelPlayer.swift */; };
-		288008072094A220009F2666 /* AbstractPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288008062094A220009F2666 /* AbstractPlayer.swift */; };
+		288008072094A220009F2666 /* BasicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288008062094A220009F2666 /* BasicPlayer.swift */; };
 		28984E1E2067C4BD00427D72 /* PlayerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28984E1D2067C4BD00427D72 /* PlayerSession.swift */; };
 		28984E202067C4CD00427D72 /* PlayerSessionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28984E1F2067C4CD00427D72 /* PlayerSessionItem.swift */; };
 		28B174D62078E8C700BDD52D /* LowLevelRendererViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B174D52078E8C700BDD52D /* LowLevelRendererViewContext.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		288007FF20948D67009F2666 /* HighLevelPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighLevelPlayer.swift; sourceTree = "<group>"; };
-		288008062094A220009F2666 /* AbstractPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractPlayer.swift; sourceTree = "<group>"; };
+		288008062094A220009F2666 /* BasicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPlayer.swift; sourceTree = "<group>"; };
 		28984E1D2067C4BD00427D72 /* PlayerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSession.swift; sourceTree = "<group>"; };
 		28984E1F2067C4CD00427D72 /* PlayerSessionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSessionItem.swift; sourceTree = "<group>"; };
 		28B174D52078E8C700BDD52D /* LowLevelRendererViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowLevelRendererViewContext.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		28A6D352207A9D78000BD637 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				288008062094A220009F2666 /* AbstractPlayer.swift */,
+				288008062094A220009F2666 /* BasicPlayer.swift */,
 				28F09D0A204E7FD10086823D /* LowLevelPlayer.swift */,
 				288007FF20948D67009F2666 /* HighLevelPlayer.swift */,
 				28BDE2D2205EA82C0032F269 /* LowLevelRendererView.swift */,
@@ -164,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				288008072094A220009F2666 /* AbstractPlayer.swift in Sources */,
+				288008072094A220009F2666 /* BasicPlayer.swift in Sources */,
 				28BDE2D3205EA82C0032F269 /* LowLevelRendererView.swift in Sources */,
 				28B174D62078E8C700BDD52D /* LowLevelRendererViewContext.swift in Sources */,
 				2880080020948D67009F2666 /* HighLevelPlayer.swift in Sources */,
