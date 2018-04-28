@@ -14,14 +14,16 @@ import Smena
 class PlayerVCModel {
 
     // MARK: - Properties
-    private let player: AbstractPlayer
+    private let player: BasicPlayer
     private weak var delegate: PlayerVCModelDelegate?
 
 
     // MARK: - Lyfecycle
-    init(player: AbstractPlayer, delegate: PlayerVCModelDelegate) {
+    init(player: BasicPlayer, delegate: PlayerVCModelDelegate) {
         self.player = player
         self.delegate = delegate
+
+        player.loopingEnabled = true
     }
 
     deinit {

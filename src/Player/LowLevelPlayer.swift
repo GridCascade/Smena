@@ -10,23 +10,20 @@ import Foundation
 import AVFoundation
 
 
-public class LowLevelPlayer: NSObject, AbstractPlayer {
+public class LowLevelPlayer: BasicPlayer {
 
     // MARK: - Properties
     private var caDisplayLink: CADisplayLink!
     private var avVideoOutput: AVPlayerItemVideoOutput!
-    private var avPlayer: AVPlayer!
 
     private var videoOutputQueue: DispatchQueue!
     private weak var rendererView: LowLevelRendererView?
 
     // MARK: - Lyfecycle
-    public required init(view: UIView) {
+    public required override init(view: UIView) {
         assert(view is LowLevelRendererView, "View should be an instance of LowLevelRendererView")
+        super.init(view: view)
 
-        super.init()
-
-        avPlayer = AVPlayer()
         rendererView = view as? LowLevelRendererView
         setupVideoOutput(forItem: avPlayer.currentItem)
 
@@ -38,33 +35,23 @@ public class LowLevelPlayer: NSObject, AbstractPlayer {
     }
 
     // MARK: - Public
-    public func start() {
-        avPlayer.play()
+    public override func start() {
+        super.start()
         resumeDisplay()
     }
 
-    public func pause() {
-        avPlayer.pause()
+    public override func pause() {
+        super.pause()
         suspendDisplay()
     }
 
-    public func setSession(session: PlayerSession) {
-        guard let asset = session.combinedAsset() else { return }
-        setAsset(asset: asset)
-    }
-
-    public func setAsset(asset: AVAsset) {
-        let newItem = AVPlayerItem(asset: asset)
-        replaceCurrentItem(with: newItem)
-    }
-
-    public func replaceCurrentItem(with item: AVPlayerItem?) {
-        avPlayer.replaceCurrentItem(with: item)
+    public override func replaceCurrentItem(with item: AVPlayerItem?) {
+        super.replaceCurrentItem(with: item)
         setupVideoOutput(forItem: item)
         suspendDisplay()
     }
 
-    public func destroy() {
+    public override func destroy() {
         destroyCADisplayLink()
         removeAVVideoOutput()
     }
