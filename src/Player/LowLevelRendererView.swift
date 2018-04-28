@@ -1,5 +1,5 @@
 //
-//  RendererView.swift
+//  LowLevelRendererView.swift
 //  Smena
 //
 //  Created by Dmitrii on 18/03/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import GLKit
 
-public class RendererView: UIView {
+public class LowLevelRendererView: UIView {
 
     // MARK: - Properties
     var ciImage: CIImage? {
@@ -21,7 +21,7 @@ public class RendererView: UIView {
     var ciTime: CFTimeInterval?
     var ciTransform = CGAffineTransform.identity
 
-    private var context: RendererViewContext?
+    private var context: LowLevelRendererViewContext?
     private var glkView: GLKView?
 
     // MARK: - Lyfecycle
@@ -58,8 +58,8 @@ public class RendererView: UIView {
         guard ciImage != nil else { return }
         if context == nil {
             // EAGL (OpenGL) context
-            context = RendererViewContextEAGL()
-            let eaglContext = context as! RendererViewContextEAGL
+            context = LowLevelRendererViewContextEAGL()
+            let eaglContext = context as! LowLevelRendererViewContextEAGL
             glkView = GLKView(frame: frame, context: eaglContext.eaglContext)
             glkView!.contentScaleFactor = contentScaleFactor;
             glkView!.delegate = self
@@ -90,7 +90,7 @@ public class RendererView: UIView {
 }
 
 
-extension RendererView: GLKViewDelegate {
+extension LowLevelRendererView: GLKViewDelegate {
     public func glkView(_ view: GLKView, drawIn rect: CGRect) {
         autoreleasepool(invoking: {() -> () in
             glClearColor(0, 0, 0, 0)
