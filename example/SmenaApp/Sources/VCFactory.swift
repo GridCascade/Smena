@@ -32,6 +32,9 @@ class VCFactory: NSObject {
 extension UIViewController {
 
     func wrapped() -> UINavigationController {
-        return UINavigationController.init(rootViewController: self)
+        let navigationController = UINavigationController(rootViewController: self)
+        navigationController.navigationBar.tintColor = UIColor.green
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        return navigationController
     }
 }

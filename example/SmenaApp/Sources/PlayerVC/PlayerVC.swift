@@ -24,6 +24,9 @@ class PlayerVC: UIViewController {
         super.viewDidLoad()
         let player = HighLevelPlayer(view: rendererView)
         model = PlayerVCModel(player: player, delegate: self)
+
+        toolbar.setBackgroundImage(UIImage(), forToolbarPosition: UIBarPosition.any, barMetrics: .default)
+        toolbar.tintColor = UIColor.green
     }
 
     override func viewWillAppear(_ animated: Bool) {

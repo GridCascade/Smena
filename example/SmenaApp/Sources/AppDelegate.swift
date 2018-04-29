@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
         //let controller = VCFactory().firstVC().wrapped()
         let controller = VCFactory().playerVC().wrapped()
+        //let controller = VCFactory().recorderVC().wrapped()
 
         window.rootViewController = controller
         window.makeKeyAndVisible()
