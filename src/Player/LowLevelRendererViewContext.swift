@@ -14,12 +14,7 @@ class LowLevelRendererViewContext {
     let ciContext: CIContext
 
     init(ciContext context: CIContext?) {
-        if context == nil {
-            let context = CIContext(options: nil)
-            self.ciContext = context
-        } else {
-            self.ciContext = context!
-        }
+        self.ciContext = context ?? CIContext(options:nil)
     }
 }
 
