@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		288008022094A026009F2666 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288008012094A026009F2666 /* VCFactory.swift */; };
 		288008042094A0D0009F2666 /* PlayerVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288008032094A0D0009F2666 /* PlayerVCModel.swift */; };
+		2880080D2095CB82009F2666 /* OkGo_8sec.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2880080B2095CB82009F2666 /* OkGo_8sec.mp4 */; };
+		2880080E2095CB82009F2666 /* OKGo_full.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2880080C2095CB82009F2666 /* OKGo_full.mp4 */; };
 		28984E2420680B4C00427D72 /* Smena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BF42481FC3271400021AC4 /* Smena.framework */; };
 		28984E27206815B600427D72 /* Smena.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2BF42481FC3271400021AC4 /* Smena.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28F09D00204B15FE0086823D /* RecorderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F09CFC204B15FD0086823D /* RecorderVC.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		288008012094A026009F2666 /* VCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
 		288008032094A0D0009F2666 /* PlayerVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVCModel.swift; sourceTree = "<group>"; };
+		2880080B2095CB82009F2666 /* OkGo_8sec.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OkGo_8sec.mp4; sourceTree = "<group>"; };
+		2880080C2095CB82009F2666 /* OKGo_full.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OKGo_full.mp4; sourceTree = "<group>"; };
 		28F09CFC204B15FD0086823D /* RecorderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderVC.swift; sourceTree = "<group>"; };
 		28F09CFD204B15FD0086823D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28F09CFE204B15FD0086823D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		A2BF424C1FC3279A00021AC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2880080B2095CB82009F2666 /* OkGo_8sec.mp4 */,
+				2880080C2095CB82009F2666 /* OKGo_full.mp4 */,
 				A2BF42321FC31FBC00021AC4 /* Assets.xcassets */,
 				A2BF424D1FC3286200021AC4 /* LaunchScreen.storyboard */,
 			);
@@ -236,8 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2880080E2095CB82009F2666 /* OKGo_full.mp4 in Resources */,
 				28F09D02204B15FE0086823D /* Main.storyboard in Resources */,
 				A2BF42331FC31FBC00021AC4 /* Assets.xcassets in Resources */,
+				2880080D2095CB82009F2666 /* OkGo_8sec.mp4 in Resources */,
 				A2BF424E1FC3286200021AC4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,6 +23,11 @@ class PlayerVCModel {
         self.player = player
         self.delegate = delegate
 
+        // TEST VIDEO
+        let url = Bundle.main.url(forResource: "OkGo_8sec", withExtension: "mp4")!
+        startClip(url: url)
+        //
+
         player.loopingEnabled = true
     }
 
@@ -48,15 +53,16 @@ class PlayerVCModel {
         let mediaType = info[UIImagePickerControllerMediaType] as! String
         guard mediaType == kUTTypeMovie as String  else { return }
         let url = info[UIImagePickerControllerMediaURL] as! URL
-        let item = PlayerSessionItem(url: url)
-        let session = PlayerSession(items: [item])
-
-        player.setSession(session: session)
-        startPlayer()
+        startClip(url: url)
     }
 
     // MARK: - Private
-
+    private func startClip(url: URL) {
+        let item = PlayerSessionItem(url: url)
+        let session = PlayerSession(items: [item])
+        player.setSession(session: session)
+        startPlayer()
+    }
 }
 
 
