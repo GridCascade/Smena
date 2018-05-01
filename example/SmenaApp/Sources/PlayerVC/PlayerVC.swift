@@ -17,6 +17,10 @@ class PlayerVC: UIViewController {
 
     // MARK: - Properties
     @IBOutlet private var toolbar: UIToolbar!
+    @IBOutlet private var playPauseButton: UIButton!
+    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private var infoLabel: UILabel!
+
     @IBOutlet private var rendererView: HighLevelRendererView!
 
     // MARK: - Lyfecycle
@@ -25,17 +29,26 @@ class PlayerVC: UIViewController {
         let player = HighLevelPlayer(view: rendererView)
         model = PlayerVCModel(player: player, delegate: self)
 
+        // DEBUG
+        model.startTestVideo()
+        //
+
         toolbar.setBackgroundImage(UIImage(), forToolbarPosition: UIBarPosition.any, barMetrics: .default)
         toolbar.tintColor = UIColor.green
+
+        updateTimeLabel()
+        updatePlayPauseButtonState()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        model.startUpdatingUI()
         model.startPlayer()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        model.stopUpdatingUI()
         model.pausePlayer()
     }
 
@@ -52,6 +65,18 @@ class PlayerVC: UIViewController {
         present(pickerController, animated: true, completion: nil)
     }
 
+    private func updatePlayPauseButtonState() {
+        if model.playbackStatus == .isPlaying {
+            playPauseButton.setTitle("ll", for: .normal)
+        } else if model.playbackStatus == .onPause {
+            playPauseButton.setTitle(">", for: .normal)
+        }
+    }
+
+    private func updateTimeLabel() {
+        timeLabel.text = model.playbackTime
+    }
+
 
     // MARK: - Actions
     @IBAction func saveButtonPressed() {
@@ -64,6 +89,22 @@ class PlayerVC: UIViewController {
 
     @IBAction func filtersPressed() {
 
+    }
+
+    @IBAction func playPausePressed() {
+        if model.playbackStatus == .isPlaying {
+            model.pausePlayer()
+        } else if model.playbackStatus == .onPause {
+            model.startPlayer()
+        }
+    }
+
+    @IBAction func backwardPressed() {
+
+    }
+
+    @IBAction func forwardPressed() {
+        
     }
 }
 
@@ -90,4 +131,11 @@ extension PlayerVC: UINavigationControllerDelegate {}
 // ----------------------------------------------------------------------------
 extension PlayerVC: PlayerVCModelDelegate {
 
+    func playbackStatusChanged() {
+        updatePlayPauseButtonState()
+    }
+
+    func playbackTimeChanged() {
+        updateTimeLabel()
+    }
 }
