@@ -149,8 +149,8 @@ extension BasicPlayer {
             }
 
             let hasValidDuration = newDuration.isNumeric && newDuration.value != 0
-            let newDurationSeconds = hasValidDuration ? CMTimeGetSeconds(newDuration) : 0.0
-            let currentTime = hasValidDuration ? Double(CMTimeGetSeconds(avPlayer.currentTime())) : 0.0
+            let _ = hasValidDuration ? CMTimeGetSeconds(newDuration) : 0.0
+            let _ = hasValidDuration ? Double(CMTimeGetSeconds(avPlayer.currentTime())) : 0.0
         }
         else if keyPath == #keyPath(BasicPlayer.avPlayer.rate) {
             if let newRate = (change?[NSKeyValueChangeKey.newKey] as? NSNumber)?.doubleValue {
