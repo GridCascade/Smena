@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         let window = UIWindow(frame: UIScreen.main.bounds)
 
-        //let controller = VCFactory().firstVC().wrapped()
-        let controller = VCFactory().playerVC().wrapped()
-        //let controller = VCFactory().recorderVC().wrapped()
+        //let controller = VCFactory.firstVC().wrapped()
+        let controller = VCFactory.playerVC().wrapped()
+        //let controller = VCFactory.recorderVC().wrapped()
 
         window.rootViewController = controller
         window.makeKeyAndVisible()
