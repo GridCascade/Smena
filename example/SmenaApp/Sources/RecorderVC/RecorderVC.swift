@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecorderVC: UIViewController {
+class RecorderVC: UIViewController, FromStoryboard {
 
     // MARK: - Properties
     @IBOutlet private var preview: UIView!

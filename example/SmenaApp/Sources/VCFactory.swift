@@ -8,26 +8,49 @@
 
 import UIKit
 
+final class VCFactory {
 
-class VCFactory: NSObject {
+    static func firstVC() -> ViewController {
+        return mainStoryboard.initial()
+    }
 
-    func mainStoryboard() -> UIStoryboard {
+    static func playerVC() -> PlayerVC {
+        return mainStoryboard.instantiate()
+    }
+
+    static func recorderVC() -> RecorderVC {
+        return mainStoryboard.instantiate()
+    }
+    
+    private static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
-    }
-
-    func firstVC() -> ViewController {
-        return mainStoryboard().instantiateInitialViewController() as! ViewController
-    }
-
-    func playerVC() -> PlayerVC {
-        return mainStoryboard().instantiateViewController(withIdentifier: String(describing: PlayerVC.self)) as! PlayerVC
-    }
-
-    func recorderVC() -> RecorderVC {
-        return mainStoryboard().instantiateViewController(withIdentifier: String(describing: RecorderVC.self)) as! RecorderVC
     }
 }
 
+protocol FromStoryboard
+{
+    static var storyboardId: String { get }
+}
+
+extension FromStoryboard where Self: UIViewController
+{
+    static var storyboardId: String {
+        return String(describing: self)
+    }
+}
+
+extension UIStoryboard
+{
+    func initial<T: UIViewController>() -> T
+    {
+        return instantiateInitialViewController() as! T
+    }
+    
+    func instantiate<T: UIViewController>() -> T where T: FromStoryboard
+    {
+        return instantiateViewController(withIdentifier: T.storyboardId) as! T
+    }
+}
 
 extension UIViewController {
 

@@ -11,7 +11,7 @@ import MobileCoreServices
 import Smena
 
 
-class PlayerVC: UIViewController {
+class PlayerVC: UIViewController, FromStoryboard {
 
     private var model: PlayerVCModel!
 
